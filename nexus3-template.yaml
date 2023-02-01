@@ -8,7 +8,7 @@ metadata:
     description: Sonatype Nexus 3 template
     tags: ci,nexus
 objects:
-- apiVersion: v1
+- apiVersion: image.openshift.io/v1
   kind: ImageStream
   metadata:
     labels:
@@ -20,7 +20,7 @@ objects:
         kind: DockerImage
         name: docker.io/sonatype/nexus3:${NEXUS_VERSION}
       name: ${NEXUS_VERSION}
-- apiVersion: v1
+- apiVersion: apps.openshift.io/v1
   kind: DeploymentConfig
   metadata:
     labels:
